@@ -2,6 +2,6 @@
 week = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
 Day = input('Give a number from 0-6, each number corresponds to a weekday, starting with Sunday and ending with Saturday ')
 Day = int(Day)
-for x in range (7):
+for x in range (8):
     if Day == x-1:
         print(week[Day]) 
