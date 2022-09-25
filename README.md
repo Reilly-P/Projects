@@ -13,3 +13,12 @@ all the requirements are completed
 program tested multiple times
 determines if the triangle is real or not
 grade: 110/100
+
+## 3 - Functions
+Program properly executes all desired functions with and without user input (2 test cases!)
+All requirements met
+Program tested multiple times
+Added extra credit "greater than function"
+could not figure out how to define variables a & b within the test function itself, but figured out a functional workaround.
+Functions work for floats.
+grade: 110/100
