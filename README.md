@@ -19,7 +19,14 @@ Program properly executes all desired functions with and without user input (2 t
 All requirements met
 Program tested multiple times
 Added extra credit "greater than function"
-could not figure out how to define variables a & b within the test function itself, but figured out a functional workaround.
 Functions work for floats.
 grade: 110/100
 ![Code Screenshot 1](https://user-images.githubusercontent.com/112213409/192165627-49c9646d-4346-4474-b257-ab2575d06a95.png)
+
+## 4 - Conditionals
+All requirements met
+Program tested multiple times
+Added extra credit "repeatable" part
+All test cases use assert functions
+All functions and conditional functions work properly
+110/100
