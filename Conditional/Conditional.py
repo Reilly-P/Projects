@@ -14,7 +14,6 @@ def main():
     Average()
     Largest()
     Smallest()
-    global again
     again = input("Shall we go again? (Y/N) ", )
     if again == "Y":
         main()
