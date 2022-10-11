@@ -1,3 +1,4 @@
+#https://ascii.co.uk/art/hangman original source for hangman ascii inspiration
 import time
 # I'm Reilly and this program is a showcase for a Hangman-Type game.
 # Currently it is just the stages, but I want to make it a full-fledged game, hence some of the commented code.
