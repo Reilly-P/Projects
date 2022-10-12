@@ -30,3 +30,9 @@ Added extra credit "repeatable" part
 All test cases use assert functions
 All functions and conditional functions work properly
 110/100
+
+## 4 - Loop guess the number project
+met all requirements (90 points)
+updated readme (10 points)
+tested the program many times
+bonus points (+10)
