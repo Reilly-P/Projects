@@ -31,8 +31,15 @@ All test cases use assert functions
 All functions and conditional functions work properly
 110/100
 
-## 4 - Loop guess the number project
+## 5 - Loop guess the number project
 met all requirements (90 points)
 updated readme (10 points)
 tested the program many times
 bonus points (+10)
+
+## 6 - Avian String Problem
+solution accepted (70 points)
+wrote and tested 3 test cases as the requirement asked (20 points)
+screenshot is in the file screenshot.jpg (5 points)
+readme is up to date (5 points)
+Total points = 100
