@@ -43,3 +43,12 @@ wrote and tested 3 test cases as the requirement asked (20 points)
 screenshot is in the file screenshot.jpg (5 points)
 readme is up to date (5 points)
 Total points = 100
+
+##7 - Simon Says
+solution accepted (70 points)
+wrote 3 test cases as the requirement asked (20 points)
+screenshot is in the file screenshot.jpg (5 points)
+readme is up to date (5 points)
+Total points = 100
+
+![Screenshot 2022-10-31 173649](https://user-images.githubusercontent.com/112213409/199129196-cb685f98-9ad5-41f9-bfc7-f72ee810c1ea.png)
