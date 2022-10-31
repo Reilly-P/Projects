@@ -44,7 +44,7 @@ screenshot is in the file screenshot.jpg (5 points)
 readme is up to date (5 points)
 Total points = 100
 
-##7 - Simon Says
+## 7 - Simon Says
 solution accepted (70 points)
 wrote 3 test cases as the requirement asked (20 points)
 screenshot is in the file screenshot.jpg (5 points)
