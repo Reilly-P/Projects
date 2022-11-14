@@ -1,5 +1,5 @@
-H = input()
-T = input()
+H = int(input())
+T = int(input())
 def One():
     global T
     global H
