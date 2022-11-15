@@ -1,7 +1,8 @@
 myfile = open("test.txt", "w")
-myfile.write("My first file written from Python\n")
-myfile.write("---------------------------------\n")
-myfile.write("Hello, world!\n")
+myfile.write("The First Oath\n")
+myfile.write("Life before Death\n")
+myfile.write("Strength before Weakness\n")
+myfile.write("Journey before Destination\n")
 myfile.close()
 
 oldfile = open("test.txt", "r")
