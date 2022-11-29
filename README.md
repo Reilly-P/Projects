@@ -69,3 +69,7 @@ screenshot is in the file screenshot.jpg (5 points)
 readme is up to date (5 points)
 Total points = 100
 
+<<<<<<< HEAD
+=======
+![Alpha](https://user-images.githubusercontent.com/112213409/202823315-7e3ae585-f480-4f21-b811-f0bc188f0b33.png)
+>>>>>>> e082b4c9474fee8a6e337580e3b49516bd225031
