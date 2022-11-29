@@ -8,8 +8,43 @@ name = input("What is your name? ")
 print("Hey there!", name)
 print("The hangman game is under construction, maybe you'll get to play it in a few weeks…")
 print("This is what various stages of the hangman game will look like…")
-# ignore the line below this, it is part of a side project I am working on with this program
-# word = input("What is your word? ")
+
+import json
+import os
+import random
+from urllib import request
+
+def retrieve_page(url, file_name):
+    """Download the contents of a web page.
+    """
+    response = request.urlretrieve(url, file_name)
+
+file_name = "EDMTDictionary.json"
+if os.path.isfile(file_name) != True:
+    retrieve_page('https://github.com/eddydn/DictionaryDatabase/raw/master/EDMTDictionary.json', file_name)
+#else:
+    #print("Already have the dictionary")
+
+with open("EDMTDictionary.json") as json_dict:
+    words_dict = json.load(json_dict)
+    #print(type(words_dict))
+    #print('There are {0} words in the file'.format(len(words_dict)))
+    #print(words_dict[2584])
+    #print(type(words_dict[2584]))    
+    desc = random.choice(words_dict)
+    choice = desc['word']
+    while len(desc['word']) > 5:
+        desc = random.choice(words_dict)
+        choice = desc['word']
+    print('{}\n{}\n{}'.format(desc['word'], \
+        desc['type'], desc['description']))
+
+letters = [*choice]
+print(letters)
+
+
+
+#word = input("What is your word? ")
 
 #These are the stages as Variables
 stg0 = '''
@@ -76,21 +111,28 @@ stg6 = '''
      |
  jgs_|___'''
 stages = [stg1, stg2, stg3, stg4, stg5, stg6]
-#This is to display the stages in order
-for a in stages:
-    time.sleep(3.5)
-    print(a)
-# Ignore everything below this point, I am working on making it a functioning game for fun
-# for z in word:
-#    guess = input("What is your 1 letter guess? ")
-#    for x in word:
-#        if x == guess:
-#            print("Correct!")
-#            break
-#    else:
-#        y=y+1
-#        if y=1:
-#            print (stg1)
-#        else:
-#            if y = 2:
-#                print (stg2)
+
+
+def hangman():
+    previndex = -1
+    guesses = []
+    for z in letters:
+        guess = input("What is your 1 letter guess? ")
+        for x in letters:
+            if x == guess:
+                index = letters.index(x)
+                if index < previndex:
+                    guesses.insert(0,x)
+                elif previndex < index:
+                    guesses.append(x)
+                print("Correct!")
+                
+    print(guesses)
+hangman()
+    #else:
+     #   y = y+1
+      #  if y==1:
+       #     print (stg1)
+        #else:
+         #   if y == 2:
+          #      print (stg2)
