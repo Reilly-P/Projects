@@ -6,8 +6,7 @@ import time
 # This is to get the name of the player
 name = input("What is your name? ")
 print("Hey there!", name)
-print("The hangman game is under construction, maybe you'll get to play it in a few weeks…")
-print("This is what various stages of the hangman game will look like…")
+
 
 import json
 import os
@@ -30,17 +29,19 @@ with open("EDMTDictionary.json") as json_dict:
     #print(type(words_dict))
     #print('There are {0} words in the file'.format(len(words_dict)))
     #print(words_dict[2584])
-    #print(type(words_dict[2584]))    
+    #print(type(words_dict[2584]))  
+    length = input("What is the length of the word? (Max of 23 letters) ")  
     desc = random.choice(words_dict)
     choice = desc['word']
-    while len(desc['word']) > 5:
+    while len(desc['word']) != int(length):
         desc = random.choice(words_dict)
         choice = desc['word']
-    print('{}\n{}\n{}'.format(desc['word'], \
-        desc['type'], desc['description']))
+    #print('{}\n{}\n{}'.format(desc['word'], \
+    #    desc['type'], desc['description']))
 
+choice = choice.lower()
 letters = [*choice]
-print(letters)
+letters2 = letters.copy()
 
 
 
@@ -110,24 +111,47 @@ stg6 = '''
      |      / \\
      |
  jgs_|___'''
-stages = [stg1, stg2, stg3, stg4, stg5, stg6]
+stages = [stg0, stg1, stg2, stg3, stg4, stg5, stg6]
 
+def death():
+    print('{}\n{}\n{}'.format(desc['word'], \
+        desc['type'], desc['description']))
+    print("You Lose!")
+    exit()
 
 def hangman():
-    previndex = -1
+    hungmen = 0
+    wrong = []
     guesses = []
-    for z in letters:
+    for i in range(len(letters)):
+        guesses.append(" ")
+    while True:
+        if hungmen == 6:
+            death()
         guess = input("What is your 1 letter guess? ")
+        guess = guess.lower()
         for x in letters:
             if x == guess:
                 index = letters.index(x)
-                if index < previndex:
-                    guesses.insert(0,x)
-                elif previndex < index:
-                    guesses.append(x)
+                letters[index] = ""
+                print(stages[hungmen])
+                guesses[index] = x
+                print(guesses)
+                print("Wrong:", wrong)
                 print("Correct!")
                 
-    print(guesses)
+        if guess not in letters2:
+            hungmen += 1
+            print(stages[hungmen])
+            print(guesses)
+            wrong.append(guess)
+            print("Wrong:", wrong)
+        if guesses == letters2:
+            print("You win!")
+            print('{}\n{}\n{}'.format(desc['word'], \
+        desc['type'], desc['description']))
+            break
+                
 hangman()
     #else:
      #   y = y+1
