@@ -35,7 +35,7 @@ stg0 = '''
      |       
      |      
      |
- jgs_|___'''
+ ____|___'''
 stg1 = '''
      _________
      |/      |
@@ -44,7 +44,7 @@ stg1 = '''
      |       
      |      
      |
- jgs_|___'''
+ ____|___'''
 stg2 = '''
      _________
      |/      |
@@ -53,7 +53,7 @@ stg2 = '''
      |       |
      |      
      |
- jgs_|___'''
+ ____|___'''
 stg3 = '''
      _________
      |/      |
@@ -62,7 +62,7 @@ stg3 = '''
      |       |
      |      
      |
- jgs_|___'''
+ ____|___'''
 stg4 = '''
      _________
      |/      |
@@ -71,7 +71,7 @@ stg4 = '''
      |       |
      |      
      |
- jgs_|___'''
+ ____|___'''
 stg5 = '''
      _________
      |/      |
@@ -80,7 +80,7 @@ stg5 = '''
      |       |
      |      / 
      |
- jgs_|___'''
+ ____|___'''
 stg6 = '''
      _________
      |/      |
@@ -89,8 +89,17 @@ stg6 = '''
      |       |
      |      / \\
      |
- jgs_|___'''
-stages = [stg0, stg1, stg2, stg3, stg4, stg5, stg6]
+ ____|___'''
+stg7 = '''
+     _________
+     |/      |
+     |     (x_x)
+     |      /|\\
+     |       |
+     |      / \\
+     |
+ ____|___'''
+stages = [stg0, stg1, stg2, stg3, stg4, stg5, stg6, stg7]
 
 def again():
     YN = input("Play again? (Y/N) ",)
@@ -124,7 +133,7 @@ def hangman():
         #print('There are {0} words in the file'.format(len(words_dict)))
         #print(words_dict[2584])
         #print(type(words_dict[2584]))  
-        length = input("What is the length of the word? (Max of 23 letters) ")  
+        length = input("What is the length of the word? (Max of 21 letters) ")  
         desc = random.choice(words_dict)
         choice = desc['word']
         while len(desc['word']) != int(length):
@@ -151,7 +160,7 @@ def hangman():
         guesses.append(" ")
     while True:
         # This ends the game
-        if hungmen == 6:
+        if hungmen == 7:
             death()
         # Here is where you guess (the guess is also converted to lowercase)
         guess = input("What is your 1 letter guess? ")
